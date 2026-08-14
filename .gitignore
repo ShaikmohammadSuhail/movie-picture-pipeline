@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+Pipfile.lock.bak
+
+# Terraform
+setup/terraform/.terraform/
+setup/terraform/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+
+# Build artifacts
+frontend/build/
+backend/__pycache__/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vendored pip artifacts
+backend/.vendor/

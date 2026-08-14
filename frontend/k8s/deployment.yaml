@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mp-frontend
+  labels:
+    app: mp-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mp-frontend
+  template:
+    metadata:
+      labels:
+        app: mp-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: frontend
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_MOVIE_API_URL
+              value: "http://mp-backend:5000"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 15
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mp-frontend
+  labels:
+    app: mp-frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: mp-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
