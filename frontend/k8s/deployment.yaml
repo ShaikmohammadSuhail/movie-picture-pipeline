@@ -21,7 +21,7 @@ spec:
             - containerPort: 3000
           env:
             - name: REACT_APP_MOVIE_API_URL
-              value: "http://mp-backend:5000"
+              value: "http://a83658a5bd2cb4ff8b485d4ed6d9e392-928142772.us-east-1.elb.amazonaws.com:5000"
           readinessProbe:
             httpGet:
               path: /
