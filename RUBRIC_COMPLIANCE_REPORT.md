@@ -45,7 +45,7 @@ parse as valid YAML and were audited line-by-line below.
 | 1.10 | Lint & Test run in parallel | two separate jobs, no `needs` | `frontend-ci.yaml:13,42` | PASS |
 | 1.11 | BUILD job runs only after lint+test (needs) | `needs: [lint, test]` | `frontend-ci.yaml:73` | PASS |
 | 1.12 | BUILD job builds with docker | `docker build` step | `frontend-ci.yaml:100-104` | PASS |
-| 1.13 | BUILD uses env var `REACT_APP_MOVIE_API_URL` via build-arg | `--build-arg=REACT_APP_MOVIE_API_URL` | `frontend-ci.yaml:103` | PASS |
+| 1.13 | BUILD uses env var `REACT_APP_MOVIE_API_URL` via build-arg | `--build-arg=REACT_APP_MOVIE_API_URL` | `frontend-ci.yaml:106` | PASS |
 | 1.14 | Triggered automatically on pull_request | `on: pull_request` | `frontend-ci.yaml:4` | PASS |
 | 1.15 | Runs only when frontend code changes | `paths: ["frontend/**"]` | `frontend-ci.yaml:7` | PASS |
 | 1.16 | Can be run manually | `workflow_dispatch` | `frontend-ci.yaml:9` | PASS |

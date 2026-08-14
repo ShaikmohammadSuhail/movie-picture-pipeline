@@ -188,11 +188,9 @@ docker run -p 3000:3000 --rm -d mp-frontend
 > **GitHub repository (public):** `https://github.com/ShaikmohammadSuhail/movie-picture-pipeline`
 >
 > **Frontend EKS Service URL:** `http://adae87aa58fc541d7b623e5d8b4c9c9b-324425899.us-east-1.elb.amazonaws.com`
->   - e.g. `http://ae0a1b2c...us-east-1.elb.amazonaws.com`
 >   - Browser screenshot with this URL visible, showing the movie list.
 >
 > **Backend EKS Service URL:** `http://a83658a5bd2cb4ff8b485d4ed6d9e392-928142772.us-east-1.elb.amazonaws.com:5000/movies`
->   - e.g. `http://de0f1a2b...us-east-1.elb.amazonaws.com:5000/movies`
 >   - Browser screenshot with this URL visible, showing the JSON list of movies.
 >
 > **kubectl get all:** terminal screenshot after `kubectl get all`
