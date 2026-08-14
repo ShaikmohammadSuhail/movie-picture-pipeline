@@ -229,3 +229,19 @@ Submission-ready evidence set:
 - Screenshot of `kubectl get all`.
 - If the infrastructure is torn down before review (to save credits), the
   above three screenshots satisfy the requirement without live URLs.
+
+### How to submit (two ways)
+
+1. **Public GitHub repository URL** (recommended — reviewers like to inspect
+   the code and the live workflow runs):
+   > **https://github.com/ShaikmohammadSuhail/movie-picture-pipeline**
+   Paste this URL as the project link in the submission form. The reviewer can
+   open the repo, browse the source, check `.github/workflows/`, and click the
+   Actions tab to see all four pipelines passing.
+
+2. **Zip archive** (`movie-picture-pipeline.zip`) — upload this file if the
+   submission form only accepts a file upload. It contains the full source,
+   the four workflow files, `README.md`, `RUBRIC_COMPLIANCE_REPORT.md`, and the
+   `screenshots/` evidence. Include the live URLs above in your submission
+   notes/reviewer message so the reviewer can still click through to the
+   deployed apps.

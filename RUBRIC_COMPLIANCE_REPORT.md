@@ -2,12 +2,22 @@
 
 **Project:** Movie Picture Pipeline (CI/CD with GitHub Actions + EKS)
 **Author:** DevOps submission
-**Date:** 2026-08-13
+**Date:** 2026-08-14
 **Verification performed:** Frontend lint/test/build run locally (Node 18) —
 `eslint .` → 0 errors, `CI=true npm test` → 3 passed / 3 total;
 `react-scripts build` → success. Backend lint/test run locally (Python venv) —
 `flake8` → 0 errors, `pytest` → 3 passed / 3 total. All 4 workflow YAML files
 parse as valid YAML and were audited line-by-line below.
+
+**Live deployment verification (2026-08-14):**
+- All 4 GitHub Actions workflows ran to **success** on `main`
+  (Backend CI `31769371152`, Backend CD `31769373939`,
+  Frontend CI `31769370044`, Frontend CD `31770225275`).
+- Frontend EKS Service URL: `http://adae87aa58fc541d7b623e5d8b4c9c9b-324425899.us-east-1.elb.amazonaws.com`
+- Backend EKS Service URL: `http://a83658a5bd2cb4ff8b485d4ed6d9e392-928142772.us-east-1.elb.amazonaws.com:5000/movies`
+- `kubectl get all` shows both pods `Running` and both `LoadBalancer`
+  services healthy. Screenshots in `screenshots/` (frontend movie list,
+  backend `/movies` JSON, `kubectl get all`, GitHub Actions success).
 
 > **Assumption (rubric ambiguity):** Table 3 (Backend CD) states the file
 > *"should be called `frontend-cd.yaml`"* while the workflow **name** and all
