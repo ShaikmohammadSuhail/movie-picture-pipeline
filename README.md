@@ -195,13 +195,18 @@ docker run -p 3000:3000 --rm -d mp-frontend
 >   - e.g. `http://de0f1a2b...us-east-1.elb.amazonaws.com:5000/movies`
 >   - Browser screenshot with this URL visible, showing the JSON list of movies.
 >
-> **kubectl get all:** capture the terminal screenshot after `kubectl get all`
+> **kubectl get all:** terminal screenshot after `kubectl get all`
 >   - `kubectl get all` should show the `mp-frontend` and `mp-backend`
->     deployments, pods, and both services in `Running` state.
+>     deployments, pods, and both services in `Running` state. See
+>     `screenshots/kubectl-get-all.png`.
+>
+> **GitHub Actions (screenshots):** `screenshots/github-actions-success.png`
+>   - All four workflows (Backend/Frontend CI and CD) run to `success`
+>     against the `main` branch.
 
-After filling in the three placeholders above, this README fulfills the
-reviewer's requirement to provide the public GitHub link and the deployed
-application URLs.
+All live URLs above, the four workflow runs (all green) and the screenshots in
+`screenshots/` fulfill the reviewer's requirement to provide the public GitHub
+link and the deployed application URLs:
 
 ### How to get the public URLs and screenshots
 
